@@ -21,6 +21,7 @@ div {
     position: relative;
     padding: 1rem;
     height: 80vh;
+    overflow: hidden;
 }
 
 div > img {
