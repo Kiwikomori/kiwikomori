@@ -103,3 +103,23 @@ function exitBackrooms() {
     fade.classList.remove('out');
     }, 450);
 }
+
+function switchPOV() {
+
+  fade.classList.add('out');
+  setTimeout(() => {
+
+
+  document.getElementById("north").style.opacity = "0";
+  document.getElementById("north").style.pointerEvents = "none";
+  document.getElementById("vnView").style.opacity = "1";
+  document.getElementById("vnView").style.pointerEvents = "auto";
+
+  document.getElementById("navLeft").style.display = "none";
+  document.getElementById("navRight").style.display = "none";
+
+  fade.classList.remove('out');
+
+  }, 450);
+}
+

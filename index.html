@@ -23,7 +23,7 @@
 
                     <footer>A game by Kiwikomori</footer>
                 </div>
-            </section>
+    </section>
 
     <section id="collection">
         <div>
@@ -80,6 +80,7 @@
             </div> <!-- scrollable-->
         </div> <!-- blur-->
     </section>
+
     <main id="game">
         <nav id="navi">
             <!-- navigation here -->
@@ -93,7 +94,7 @@
                 <img src="images/gameAssets/rooms/north/northScene.png" alt="northScene" draggable="false">
                 <img src="images/characters/osumi_1.png" alt="osumi1" id="osumi" onClick="osumichange()" draggable="false">
                 <div id="counterShadow"></div>
-                <img src="images/gameAssets/rooms/north/northCounter.svg" alt="counter" id="northCounter" draggable="false">
+                <img src="images/gameAssets/rooms/north/northCounter.svg" alt="counter" id="northCounter" draggable="false" onClick="switchPOV()">
             </section>
 
             <!-- EAST ROOM -->
@@ -117,6 +118,20 @@
                 <img src="images/gameAssets/rooms/west/westCrate.svg" alt="westCrate" id="westCrate" draggable="false">
             </section>
 
+            <!-- Visual Novel View -->
+            <section id="vnView">
+                <img src="images/gameAssets/vn/shopbg.png" draggable="false">
+                <img src="images/characters/osumi_1.png" alt="osumi1" id="osumiVn" draggable="false">
+                <img src="images/gameAssets/vn/vnCounter.svg" draggable="false" id="vnCounter">
+                <div id="dialogueWrap">
+                    <div id="dialogueBubble">
+                    <p id="day1D">Oh hello! I wasn’t expecting a camera repair shop of all things to open up here, in such a tucked away and hidden spot.</p>
+                </div>
+
+                <div class="dialogueArrow"></div>
+                </div>
+                
+            </section>
         </div>
 
         <!-- fade out animation for switching rooms -->

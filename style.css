@@ -404,6 +404,7 @@ body:has(#archivesbtn:checked) #title, body:has(#collectionbtn:checked) #title {
     height: 100%;
     background-color: #42210583;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
     /* hidden by default */
     opacity: 0;
     pointer-events: none;
@@ -484,4 +485,59 @@ body:has(#archivesbtn:checked) #title, body:has(#collectionbtn:checked) #title {
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
     z-index: 9999;
+}
+
+
+/* =============== VISUAL NOVEL VIEW =============== */
+#vnView {
+    /* hidden by default */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+#vnCounter {
+    top: 130px;
+}
+
+#osumiVn {
+    left: 146px;
+    width: 358px;
+}
+
+/* text bubble positioning */
+#dialogueWrap {
+    position: absolute;
+    top: 19%;
+    left: 20px;
+}
+
+/* text bubble style */
+#dialogueBubble {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #d4a34f;
+    width: 230px;
+    background: rgba(120, 70, 30, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: center;
+    color: #ffd277;
+    font-family: "Philosopher", serif;
+    font-size: 15px;
+    line-height: 1.4;
+    height: auto;
+}
+
+/* arrow for bottom */
+.dialogueArrow {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #d4a34f;
 }
