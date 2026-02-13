@@ -4,16 +4,16 @@ Run a quaint camera repair shop tucked away in a secluded alleyway inside a magi
 The game blends cozy shop management with some character driven storytelling. The calming atmosphere encourages players to slow down, listen carefully, and piece together the lives connected to each camera.
 
 # Design Process
-This game was designed for players who enjoy simple storytelling and a cozy game over fast-paced mechanics. So, the players that these would attract would be Free-Spirits and Achievers, where they are free to do anything with no time limit and also replay to get all the collectibles. 
+This game was designed for players who enjoys puzzle solving, simple storytelling and a cozy gamimg experience over fast-paced and intense mechanics. So, the players that these would attract would be Free-Spirits and Achievers, where they are free to do anything with no time limit and also replay to get all the collectibles. 
 
 We wanted to set the world in a magical fantasy vibe as it woud open up to a lot more possibilities with repairing cameras.
 
 ## User Stories
 ### Story-Driven Player
 
-- As a socialiser, I want to learn about the world and characters before playing, so that I feel emotionally invested.
+- As a philanthropist, I want to learn about the world and characters before playing, so that I feel emotionally invested.
 - As an immerive free spirited player, I want atmospheric visuals and cohesive design, so that I can feel transported into the fantasy setting.
-- As a socialiser, I want to have a clear access to the stories and collectibles, so that I can deepen my understanding of the world’s lore.
+- As a philanthropist, I want to have a clear access to the story and collectibles's descriptions, so that I can deepen my understanding of the world’s lore.
 
 ### Casual / Cozy Player
 
@@ -51,6 +51,10 @@ We wanted to set the world in a magical fantasy vibe as it woud open up to a lot
 [PiCrew](https://picrew.me/en/image_maker/1649970) - Used in making all the characters sprites.
 
 Figma - Used in designing text and editing images
+
+Photoshop - Used to clean up and improve on the images that AI generated
+
+[Lottie](https://app.lottiefiles.com/animation/3b938341-6aeb-4bbe-bf2f-c4fd1da86cdf?panel=download) - for optimised and smooth animations in our website.
 
 ## Acknowledgements
 At first we weren't sure if an escape room could even be coded. While looking through multiple inspirations, such as [Rusty Lake](rustylake.com/room-escape-games/). However, it wasn't enough because they made applications. We managed to come across an interesting article by [Daniel Marino](https://iamdanielmarino.com/posts/making-an-escape-room-with-only-html-and-css/) where he made an escape room using only HTML and CSS. We took inspiration of how they used invisible checkboxes and radio buttons to make everything work. Things were much easier with JavaScript.
