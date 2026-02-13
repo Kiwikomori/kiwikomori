@@ -102,14 +102,12 @@ a {
     user-select: none;
     margin: 0;
     padding: 0;
-    image-rendering: smooth;
 }
 
 /* global positioning for all room elements */
 #room img {
     position: absolute;
 }
-
 /* =============== NAVIGATION =============== */
 .room {
     position: absolute;
@@ -136,35 +134,37 @@ a {
     opacity: 1;
 }
 
-/* hidden for now */
-#southBack {
+#navBack {
     display: none;
 }
 
 /* =============== NORTH ROOM ELEMENTS =============== */
 #room {
-    background-image: url('images/gameAssets/rooms/north/northScene.png');
+    background-image: url('images/gameAssets/vn/shopbg.png');
     background-size: fill;
     background-position: center;
 }
 
-#door {
-    top: -50px;
-    left: 15px;
-}
-
-#lock {
-    top: 200px;
-    left: 67px;
-    width: 170px;
-}
-
 #osumi {
     top: 0;
-    left: 67px;
-    width: 400px;
+    left: 200px;
+    width: 250px;
 }
 
+#northCounter {
+    top: 85px;
+}
+
+#counterShadow {
+    position: absolute;
+    top: 354px;
+    left: 44px;
+    width: 562px;
+    height: 50px;
+    background-color: black;
+    border-radius: 100%;
+    filter: blur(20px);
+}
 /* hide all checkbox and radio input decoration, opacity 0 so it's still interactable but now fully cusotmisable */
 * input[type=checkbox],* input[type=radio] {
     opacity: 0;
@@ -177,9 +177,31 @@ a {
 
 /* =============== WEST ROOM ELEMENTS =============== */
 #westCrate {
-    top: 134px;
-    left: 420px;
+    top: 145px;
+    left: 429px;
 }
+
+/* =============== EAST ROOM ELEMENTS =============== */
+
+/* =============== SOUTH ROOM ELEMENTS =============== */
+#southDoor {
+    position: absolute;
+    width: 128px;
+    height: 247px;
+    top: 48px;
+    left: 437px;
+    background-color: transparent;
+    border: none;
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+
+#southDoor:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #000000;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
 /* =============== TITLE SCREEN =============== */
 
 /* bg image + centering */

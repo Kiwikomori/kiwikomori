@@ -15,6 +15,7 @@ const backBtn = document.getElementById('back');
 /* navigation between rooms */
 const rooms = ['north', 'east', 'southFront', 'west'];
 let currentRoom = '0';
+let insideBR = false; // false by default
 
 function go(where) {
   const fade = document.getElementById('fade');
@@ -41,4 +42,64 @@ function go(where) {
     // fade in
     fade.classList.remove('out');
   }, 450); // duration of fade out
+}
+
+function visibilityCheck() {
+  // get the buttons
+  const left = document.getElementById('navLeft');
+  const right = document.getElementById('navRight');
+  const back = document.getElementById('navBack');
+
+  if (insideBR) {
+    left.style.display = 'none';
+    right.style.display = 'none';
+    back.style.display = 'block';
+    southBack.style.display = 'grid';
+  }
+  else {
+    left.style.display = 'block';
+    right.style.display = 'block';
+    back.style.display = 'none';
+  }
+}
+
+function enterBackrooms() {
+  
+  if (rooms[currentRoom] === 'southFront') {
+    insideBR = true;
+
+    // start fade in
+    fade.classList.add('out');
+
+    setTimeout(() => {
+      // make southback active
+      document.querySelector('.room.active').classList.remove('active');
+      document.getElementById('southBack').classList.add('active');
+
+      // change button visibility
+      visibilityCheck();
+
+      // fade in
+      fade.classList.remove('out');
+  }, 450);
+}
+}
+
+function exitBackrooms() {
+  insideBR = false;
+
+  // start fade in
+  fade.classList.add('out');
+
+  setTimeout(() => {
+    // make south active again
+    document.querySelector('.room.active').classList.remove('active');
+    document.getElementById('southFront').classList.add('active');
+
+    // change button visibility
+    visibilityCheck();
+
+    // fade in
+    fade.classList.remove('out');
+    }, 450);
 }

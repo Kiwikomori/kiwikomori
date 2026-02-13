@@ -45,38 +45,47 @@
         <div id="room">
             <!-- NORTH ROOM -->
             <section id="north" class="room active">
-                <img src="images/characters/osumi_1.png" alt="osumi1" id="osumi" onClick="osumichange()">
+                <img src="images/gameAssets/rooms/north/northScene.png" alt="northScene" draggable="false">
+                <img src="images/characters/osumi_1.png" alt="osumi1" id="osumi" onClick="osumichange()" draggable="false">
+                <div id="counterShadow"></div>
+                <img src="images/gameAssets/rooms/north/northCounter.svg" alt="counter" id="northCounter" draggable="false">
             </section>
 
             <!-- EAST ROOM -->
             <section id="east" class="room">
-                <img src="images/gameAssets/rooms/east/eastScene.png" alt="eastScene" id="eastScene">
+                <img src="images/gameAssets/rooms/east/eastScene.svg" alt="eastScene" draggable="false">
             </section>
 
             <!-- SOUTH ROOM -->
             <section id="southFront" class="room">
-                <img src="images/gameAssets/rooms/south/southSceneFront.png" alt="southSceneFront" id="southSceneFront">
+                <img src="images/gameAssets/rooms/south/southSceneFront.svg" alt="southSceneFront" draggable="false">
+                <button type="button" id="southDoor" onClick="enterBackrooms()"></button>
             </section>
 
-            <section id="southBack">
-                <img src="images/gameAssets/rooms/south/southSceneBack.png" alt="southSceneBack" id="southSceneBack">
+            <section id="southBack" class="room">
+                <img src="images/gameAssets/rooms/south/southSceneBack.svg" alt="southSceneBack" draggable="false">
             </section>
 
             <!-- WEST ROOM -->
             <section id="west" class="room">
-                <img src="images/gameAssets/rooms/west/westScene.png" alt="westScene" id="westScene">
-                <img src="images/gameAssets/rooms/west/westCrate.png" alt="westCrate" id="westCrate">
+                <img src="images/gameAssets/rooms/west/westScene.svg" alt="westScene" draggable="false">
+                <img src="images/gameAssets/rooms/west/westCrate.svg" alt="westCrate" id="westCrate" draggable="false">
             </section>
 
         </div>
 
         <!-- fade out animation for switching rooms -->
         <div id="fade"></div>
-        <button type="button" onClick="go('left')">LEFT</button>
-        <button type="button" onClick="go('right')">RIGHT</button>
+        <button type="button" onClick="go('left')" id="navLeft">LEFT</button>
+        <button type="button" onClick="go('right')" id="navRight">RIGHT</button>
+        <button type="button" onClick="exitBackrooms()" id="navBack">Back</button>
     </main>
     <div id="small">Your browser is too small to play this game. Try resizing it!</div>
     <div id="touch">It appears you're using a touch device. Please play this game with a desktop and mouse!</div>
 </body>
 <script src="script.js"></script>
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+<!--
+<dotlottie-wc src="https://lottie.host/48ec130e-494f-4763-8374-fd58c19b0cb5/OkUB8yLHhU.lottie" style="width: 300px;height: 300px" autoplay loop></dotlottie-wc>
+-->
 </html>
