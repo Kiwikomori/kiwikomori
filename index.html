@@ -181,20 +181,30 @@
             <!-- Visual Novel View -->
             <section id="vnView">
                 <img src="images/gameAssets/vn/shopbg.png" draggable="false">
-                <img src="images/characters/estella_1.png" alt="osumi1" id="osumiVn" draggable="false">
+                <img src="images/characters/osumi_3.png" id="osumiVn" draggable="false">
                 <div id="dialogueWrap">
                     <div id="dialogueBubble">
-                    <p id="day1D">Oh hello! I wasn't expecting a camera repair shop of all things to open up here, in such a tucked away and hidden spot.</p>
+                    <p id="day1D"></p>
                 </div>
 
-                <div class="dialogueArrow"></div>
+                <div id="dialogueArrow"></div>
                 </div>
                 <img src="images/gameAssets/vn/vnCounter.svg" draggable="false" id="vnCounter">
+
+                <div id="playerDialogue">
+                    <div id="playerDialogueWrap">
+                        <div id="playerRow">
+                            <p id="day1PD">It looks like she got the lens dirty with magic residue.</p>
+                            <div id="playerDialogueArrow"></div>
+                        </div>
+                       
+                    </div>
+                </div>
             </section>
         </div>
 
-        <!-- fade out animation for switching rooms -->
-        <div id="fade"></div>
+        <!-- fade out animation -->
+        <div id="fade"><p id="dayCounter"></p></div>
     </main>
     <div id="small">Your browser is too small to play this game. Try resizing it!</div>
     <div id="touch">It appears you're using a touch device. Please play this game with a desktop and mouse!</div>

@@ -105,10 +105,15 @@ function exitBackrooms() {
 }
 
 function switchPOV() {
+  const characterImg = document.getElementById("osumiVn");
+  const dialogueWrap = document.getElementById("dialogueWrap");
+  const dialogueText = document.getElementById("day1D");
 
+  fade.style.backgroundColor = "#4d2105"; 
+  fade.style.backdropFilter = "blur(5px)";
   fade.classList.add('out');
+  document.getElementById("dayCounter").textContent = "Day 1";
   setTimeout(() => {
-
 
   document.getElementById("north").style.opacity = "0";
   document.getElementById("north").style.pointerEvents = "none";
@@ -118,32 +123,46 @@ function switchPOV() {
   document.getElementById("navLeft").style.display = "none";
   document.getElementById("navRight").style.display = "none";
 
+  
+
   fade.classList.remove('out');
 
-  }, 450);
+  }, 2000);
+
+    setTimeout(() => {
+      characterImg.style.opacity = "1";
+    }, 4000);
+
+    setTimeout(() => {
+      dialogueWrap.style.opacity = "1";
+      dialogueText.textContent = "Oh hello! I wasn't expecting a camera repair shop of all things to open up here, in such a tucked away and hidden spot.";
+    characterImg.src = "images/characters/osumi_1.png";
+    }, 5500);
+
+    
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const vnView = document.getElementById("vnView");
     const dialogueText = document.getElementById("day1D");
     const characterImg = document.getElementById("osumiVn");
-
     const day1dialogue = [
         {
             text: "Oh hello! I wasn't expecting a camera repair shop of all things to open up here, in such a tucked away and hidden spot.",
-            img: "images/characters/estella_1.png"
+            img: "images/characters/osumi_1.png"
         },
         {
             text: "Still, I suppose hidden places are the most interesting ones.",
-            img: "images/characters/estella_2.png"
+            img: "images/characters/osumi_3.png"
         },
         {
             text: "Are you the owner here?",
-            img: "images/characters/estella_3.png"
+            img: "images/characters/osumi_1.png"
         },
         {
             text: "I actually have something I need fixed...",
-            img: "images/characters/estella_1.png"
+            img: "images/characters/osumi_2.png"
         }
     ];
 
@@ -160,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           // restarts dialogue to loop again, will change later
             currentIndex = 0;
-            day1dialogue.textContent = day1dialogue[0].text;
+            dialogueText.textContent = day1dialogue[0].text;
             characterImg.src = day1dialogue[0].img;
         }
     });
