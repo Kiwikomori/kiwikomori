@@ -165,3 +165,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// opening and closing 3dviewer
+function openViewer(which) {
+    const viewerGroup = document.getElementById("viewerGroup");
+    const estellaCamModel = document.getElementById("estellaCamModel");
+    const osumiCamModel = document.getElementById("osumiCamModel");
+
+    viewerGroup.style.display = "block";
+    viewerGroup.style.opacity = "1";
+    viewerGroup.style.pointerEvents = "auto";
+    
+    estellaCamModel.style.display = (which === "estella") ? "block" : "none";
+    estellaCamModel.style.pointerEvents = (which === "estella") ? "auto" : "none";
+    
+    osumiCamModel.style.display = (which === "osumi") ? "block" : "none";
+    osumiCamModel.style.pointerEvents = (which === "osumi") ? "auto" : "none";
+  }
+
+  function closeViewer() {
+    const viewerGroup = document.getElementById("viewerGroup");
+    const estellaCamModel = document.getElementById("estellaCamModel");
+    const osumiCamModel = document.getElementById("osumiCamModel");
+
+    viewerGroup.style.display = "none";
+    viewerGroup.style.opacity = "0";
+    viewerGroup.style.pointerEvents = "none";
+    
+    estellaCamModel.style.display = "none";
+    osumiCamModel.style.display = "none";
+  }
+
+  document.getElementById("estellaCamera")?.addEventListener("click", () => openViewer("estella"));
+  document.getElementById("osumiCamera")?.addEventListener("click", () => openViewer("osumi"));
+
+  document.getElementById("exitViewerButton")?.addEventListener("click", closeViewer);
