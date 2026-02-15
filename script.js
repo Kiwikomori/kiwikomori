@@ -304,8 +304,10 @@ function openViewer(which) {
   document.getElementById("exitViewerButton")?.addEventListener("click", closeViewer);
 
 //==============PUZZLES==============
-
 //Simon memory game
+
+/*REMOVE THIS COMMENT
+
 // ====== CONFIG ======
 const TOTAL_BUTTONS = 10;
 const SHOW_MS = 10000;       // how long numbers are visible before hiding
@@ -468,3 +470,4 @@ function shuffle(arr) {
   }
   return arr;
 }
+*/
