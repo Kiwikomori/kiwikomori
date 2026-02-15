@@ -1,3 +1,9 @@
+//AUDIOS
+const chime_audio = new Audio("audios/completedChime.mp3");
+const marimba_audio = new Audio("audios/completedMarimba.mp3");
+const failHum_audio = new Audio("audios/failedHum.mp3");
+const enterBell_audio = new Audio("audios/enterBell.mp3");
+
 function osumichange() {
     document.getElementById("osumi").src = "images/characters/osumi_2.png";
 }
@@ -305,11 +311,10 @@ const TOTAL_BUTTONS = 10;
 const SHOW_MS = 10000;       // how long numbers are visible before hiding
 const WINS_NEEDED = 2;
 
-// If you have number images 1.svg ... 10.svg:
+// Number images 1.svg to 10.svg
 const numberImg = (n) => `images/gameAssets/puzzles/${n}.svg`;
 
-// If your 3 red lights are DOM elements, set them here.
-// Example HTML you might have: <div class="redLight" id="light1"></div> etc
+//light elements
 const greenLight1 = document.getElementById("greenLight1");
 const greenLight2 = document.getElementById("greenLight2");
 
@@ -404,10 +409,15 @@ function handleClick(btn) {
   }
 }
 
-// ====== ROUND RESULTS ======
+// ====== ROUND RESULTS TABULATION ======
 function roundWin() {
   wins++;
   updateLights();
+  
+  //does not play when it is the final win
+  if (wins !== WINS_NEEDED) {
+  chime_audio.play();
+  }
 
   if (wins >= WINS_NEEDED) {
     gameComplete();
@@ -415,13 +425,14 @@ function roundWin() {
   }
 
   // brief pause then new round
-  setTimeout(() => startRound(), 900);
+  setTimeout(() => startRound(), 1500);
 }
 
 function roundFail() {
   // reveal all numbers so they learn
   buttons.forEach((b) => b.classList.remove("hidden"));
   buttons.forEach((b) => (b.style.pointerEvents = "none"));
+  failHum_audio.play();
 
   // restart a new round after short delay
   setTimeout(() => startRound(), 1100);
@@ -431,6 +442,7 @@ function gameComplete() {
   // reveal all
   buttons.forEach((b) => b.classList.remove("hidden"));
   buttons.forEach((b) => (b.style.pointerEvents = "none"));
+  marimba_audio.play();
 
   // put your "minigame cleared" logic here:
   // e.g. close puzzle UI, unlock next area, etc.

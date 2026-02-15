@@ -799,30 +799,34 @@ body:has(#archivesbtn:checked) #title, body:has(#collectionbtn:checked) #title {
 /*Simon game*/
 .buttonCenter{
     position: absolute;
-    top:138px;
-    left: 50%;
+    top:140px;
+    left: 320px;
 }
 
 .lightsCenter {
     position: absolute;
     top: 30px;
-    left: 50%;
+    left: 320px;
 }
 
 /*style for buttons*/
 .simonButtonStyle{
-  position:absolute;
-  width: 55px;
-  height: 55px;
-  background-color: rgba(0, 0, 0, 0);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  cursor: pointer;
+    position:absolute;
+    width: 57px;
+    height: 57px;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.15s ease;
 }
 
 .simonButtonStyle.hidden {
-  background-image: none !important;
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
 }
 
 .simonButtonStyle.correct {
@@ -837,82 +841,77 @@ body:has(#archivesbtn:checked) #title, body:has(#collectionbtn:checked) #title {
     position: absolute;
 }
 
-/* Lights default = red look */
+/* Lights default = hidden */
 #greenLight1,
 #greenLight2 {
-    opacity: 0;   
+    opacity: 0 !important;   
     transition: opacity 0.3s ease;
 }
 
 /* When player wins */
-.light-on {
-    opacity: 1;
+#greenLight1.light-on,
+#greenLight2.light-on {
+    opacity: 1 !important;
 }
 
 /*positioning lights*/
 #greenLight1 {
-    top: 30px;
-    left: -66px;
+    top: 21px;
+    left: -40px;
 }
 
 #greenLight2 {
-    top: 30px;
-    left: -17px;
-}
-
-#offLight {
-    top: 30px;
-    left: 32px;
+    top: 21px;
+    left: -0px;
 }
 
 /*positioning buttons*/
 #button1{
-    top: 0;
-    left: -154px;
-    background-image: url(images/gameAssets/puzzles/1.svg);
+    top: -3px;
+    left: -163px;
 }
 
 #button2{
-    top: 0;
-    left: -95px;
+    top: -3px;
+    left: -100px;
 }
 
 #button3{
-    top: 0;
-    left: -36px;
+    top: -3px;
+    left: -34px;
 }
 
 #button4{
-    top: 0;
-    left: 28px;
+    top: -3px;
+    left: 31px;
 }
 
 #button5{
-    top: 0;
-    left: 90px;
+    top: -3px;
+    left: 99px;
 }
 
 #button6{
-    top: 62px;
-    left: -154px;
+    top: 61px;
+    left: -163px;
 }
 
 #button7{
-    top: 62px;
-    left: -95px;
+    top: 61px;
+    left: -100px;
 }
 
 #button8{
-    top: 62px;
-    left: -36px;
+    top: 61px;
+    left: -34px;
 }
 
 #button9{
-    top: 62px;
-    left: 28px;
+    top: 61px;
+    left: 31px;
 }
 
 #button10{
-    top: 62px;
-    left: 90px;
+    top: 61px;
+    left: 99px;
 }
