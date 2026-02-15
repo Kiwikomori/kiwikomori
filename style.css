@@ -599,12 +599,12 @@ body:has(#archivesbtn:checked) #title, body:has(#collectionbtn:checked) #title {
 
 /* sizing of camera */
 .estellaCamera{
-    width: 200px;
+    width: 210px;
 }
 
 /* sizing of camera */
 .osumiCamera{
-    width: 240px;
+    width: 180px;
 }
 
 /* positioning of camera */
@@ -613,8 +613,8 @@ body:has(#archivesbtn:checked) #title, body:has(#collectionbtn:checked) #title {
     align-items: flex-end;
     gap: 100px;
     position: absolute;
-    top: 110px;
-    left: -250px;
+    top: 230px;
+    left: -230px;
 }
 
 /* position of camera and shelf as a whole */
