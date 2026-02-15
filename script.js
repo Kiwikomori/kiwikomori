@@ -577,9 +577,8 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
-<<<<<<< HEAD
 }
-*/
+
 
 const lottieCursor = document.getElementById("lottieCursor");
 
@@ -600,6 +599,3 @@ document.addEventListener("pointerdown", (e) => {
     lottieCursor.classList.remove("pulse");
   }, 300);
 });
-=======
-}
->>>>>>> 9fe68431ae39587517e4f0d15a59c61a11065f94
