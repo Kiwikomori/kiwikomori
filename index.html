@@ -57,9 +57,9 @@
                 <div id="exitViewerButton"><img src="images/collectionPage/exitIcon.svg" alt="exitViewer"></div> 
                 <div id="viewerContainer">
                     <!-- Estella's camera model-->
-                    <model-viewer alt="cameraEstella" src="models/antiqueCamera.glb" shadow-intensity="1" camera-controls id="estellaCamModel" class="modelViewer" poster="images/loading.svg"></model-viewer>
+                    <model-viewer alt="cameraEstella" src="models/antiqueCamera.glb" shadow-intensity="1" camera-controls id="estellaCamModel" class="modelViewer" poster="images/collectionPage/loading.svg"></model-viewer>
                     <!--Osumi's camera model-->
-                    <model-viewer alt="cameraOsumi" src="models/camera.glb" shadow-intensity="1" camera-controls id="osumiCamModel" class="modelViewer" poster="images/loading.svg"></model-viewer>
+                    <model-viewer alt="cameraOsumi" src="models/camera.glb" shadow-intensity="1" camera-controls id="osumiCamModel" class="modelViewer" poster="images/collectionPage/loading.svg"></model-viewer>
                 </div> 
              </div>
 
@@ -188,7 +188,7 @@
             <!-- Visual Novel View -->
             <section id="vnView">
                 <img src="images/gameAssets/vn/shopbg.png" draggable="false">
-                <img src="images/characters/osumi_3.png" id="osumiVn" draggable="false">
+                <img src="images/characters/osumi_2.png" id="osumiVn" draggable="false">
                 <div id="dialogueWrap">
                     <div id="dialogueBubble">
                     <p id="day1D"></p>
@@ -201,7 +201,7 @@
                 <div id="playerDialogue">
                     <div class="playerDialogueWrap">
                         <div class="playerRow">
-                            <p id="day1PD"></p>
+                            <p id="day1PD" class="playerDialoguetxt"></p>
                             <div class="playerDialogueArrow"></div>
                         </div>
                     </div>
@@ -209,9 +209,10 @@
 
                 <div id="playerChoice">
                     <div class="playerDialogueWrap">
-                        <div class="playerRow">
-                            <p id="day1PC"></p>
-                            <div class="playerDialogueArrow"></div>
+                        <div class="playerRowChoice">
+                            <p id="choice1" class="playerDialoguetxt"></p>
+                            <img src="images/gameAssets/vn/choiceDiv.svg" class="choiceDivider">
+                            <p id="choice2" class="playerDialoguetxt"></p>
                         </div>
                     </div>
                 </div>

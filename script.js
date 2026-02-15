@@ -138,9 +138,6 @@ function switchPOV() {
       dialogueText.textContent = "Oh hello! I wasn't expecting a camera repair shop of all things to open up here, in such a tucked away and hidden spot.";
     characterImg.src = "images/characters/osumi_1.png";
     }, 5500);
-
-    
-
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,15 +147,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const playerText = document.getElementById("day1PD");
     const playerElement = document.getElementById("playerDialogue");
     const npcArrow = document.getElementById("dialogueArrow");
-    //const playerChoiceElement = getElementById("playerChoice");
-    //const playerChoiceTxt = getElementById("day1PC");
+    const npcElement = document.getElementById("dialogueWrap");
+
 
     const day1dialogue = [
-        {
-          speaker: "npc",
-          text: "Oh hello! I wasn't expecting a camera repair shop of all things to open up here, in such a tucked away and hidden spot.",
-          img: "images/characters/osumi_1.png"
-        },
         {
           speaker: "npc",
           text: "Still, I suppose hidden places are the most interesting ones.",
@@ -230,21 +222,92 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "...watch you do it?",
           img: "images/characters/osumi_2.png"
         },
+        {
+          speaker: "choice",
+          options: [
+            {
+              // choice 1
+              text: "Okay, sure.",
+              nextDialogue: [
+                {
+                  speaker: "player",
+                  text: "Okay, sure."
+                },
+                { speaker: "npc",
+                  text: "Really? Yay!",
+                  img: "images/characters/osumi_2.png" 
+                },
+                { speaker: "npc", text: "Thank you! I'm just soo curious how you do it.", img: "images/characters/osumi_1.png" }
+              ]
+            },
+            {
+              // choice 2
+              text: "Fine by me.",
+              nextDialogue: [
+                {
+                  speaker: "player",
+                  text: "Fine by me."
+                },
+                {
+                  speaker: "npc",
+                  text: "Yay! Thanks!",
+                  img: "images/characters/osumi_2.png"
+                },
+                
+                { 
+                  speaker: "npc",
+                  text: "I've never heard of this kind of solution before. I'm so curious how you do it!", 
+                  img: "images/characters/osumi_1.png"
+                }
+              ]
+            }
+          ]
+        }
     ];
 
-    let currentIndex = 1;
+    
+    let currentDialogue = day1dialogue;
+    let currentIndex = 0;
+
+    function showChoices(options) {
+      const playerChoice = document.getElementById("playerChoice");
+      const choice1 = document.getElementById("choice1");
+      const choice2 = document.getElementById("choice2");
+
+      playerChoice.style.display = "block";
+
+      choice1.textContent = options[0].text;
+      choice2.textContent = options[1].text;
+
+      choice1.onclick = () => selectChoice(options[0]);
+      choice2.onclick = () => selectChoice(options[1]);
+    }
+
+      function selectChoice(options) {
+      const playerChoice = document.getElementById("playerChoice");
+
+      playerChoice.style.display = "none";
+
+      currentDialogue = options.nextDialogue;
+      currentIndex = 0;
+    }
 
     vnView.addEventListener("click", () => {
-      const current = day1dialogue[currentIndex];
+      const current = currentDialogue[currentIndex];
+      const playerChoice = document.getElementById("playerChoice");
+
+      // dont current index up if i didnt click any choice
+      if (playerChoice.style.display === "block") return;
+
+  
           if (current.speaker === "npc") {
             playerElement.style.display = "none";
             npcArrow.style.display = "block";
+            npcElement.style.display = "block";
 
 
             dialogueText.textContent = current.text;
             characterImg.src = current.img;
-
-            currentIndex++;
           }
 
           else if (current.speaker === "player") {
@@ -252,16 +315,21 @@ document.addEventListener("DOMContentLoaded", () => {
             npcArrow.style.display = "none";
 
             playerText.textContent = current.text;
-
-            currentIndex++;
           }
 
           else if (current.speaker === "choice") {
+            npcArrow.style.display = "none";
+            playerElement.style.display = "none";
+            npcElement.style.display = "none";
             showChoices(current.options);
           }
+          currentIndex++;
+
+          // add on this part; osumi puts camera on counter
+          if (!current) return;
+
     });
 });
-
 // opening and closing 3dviewer
 function openViewer(which) {
     const viewerGroup = document.getElementById("viewerGroup");
