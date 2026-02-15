@@ -273,7 +273,7 @@ button {
     left: 429px;
 }
 
-#westCrate-zoomedimg {
+.zoomedimg {
     border-radius: 5px;
 }
 
@@ -297,6 +297,15 @@ button {
     cursor: pointer;
     box-shadow: 0 0 13px #000000;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+#drawerBtn {
+    position: absolute;
+    width: 108px;
+    height: 26px;
+    top: 228px;
+    left: 399px;
+    background-color: transparent;
 }
 
 /* =============== TITLE SCREEN =============== */

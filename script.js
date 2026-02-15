@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           speaker: "npc",
           text: "I'm kind of in a hurry, can I just...",
-          img: "images/characters/osumi_1.png"
+          img: "images/characters/osumi_3.png"
         },
         {
           speaker: "npc",
@@ -237,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (current.speaker === "npc") {
             playerElement.style.display = "none";
             npcArrow.style.display = "block";
+
 
             dialogueText.textContent = current.text;
             characterImg.src = current.img;

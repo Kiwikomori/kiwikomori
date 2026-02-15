@@ -42,9 +42,9 @@
                     <img src="images/osumiCamera.svg" alt="osumiCamera" draggable="false" id="osumiCamera" class="osumiCamera">
                 </div>
 
-                <!--REMEMBER TO UNCOMMENT THIS ONLY TAKE OUT SILOETTE WHEN BEATEN A LEVEL-->
-                <!--Camera siloette, blacked out
-                <div class="cameraPosition" id="cameraSiloette">
+                <!--REMEMBER TO UNCOMMENT THIS ONLY TAKE OUT SILHOUETTE WHEN BEATEN A LEVEL-->
+                <!--Camera silhouette, blacked out
+                <div class="cameraPosition" id="cameraSilhouoette">
                     <img src="images/estellaCameraSil.svg" alt="estellaCamera" draggable="false" id="estellaCameraSil" class="estellaCamera">
                     <img src="images/osumiCameraSil.svg" alt="osumiCamera" draggable="false" id="osumiCameraSil" class="osumiCamera">
                 </div>-->
@@ -164,6 +164,13 @@
 
             <section id="southBack" class="room">
                 <img src="images/gameAssets/rooms/south/southSceneBack.svg" alt="southSceneBack" draggable="false">
+                <button popovertarget="drawer-zoomedin">
+                    <div id="drawerBtn"></div>
+                </button>
+                <div id="drawer-zoomedin" popover>
+                    <img src="images/gameAssets/rooms/south/openDrawer.svg" draggable="false" class="zoomedimg">
+                    <button popovertarget="drawer-zoomedin" popovertargetaction="hide"><img src="images/gameAssets/downArrow.svg" alt=""></button>
+                </div>
             </section>
 
             <!-- WEST ROOM -->
@@ -173,7 +180,7 @@
                     <img src="images/gameAssets/rooms/west/westCrate.svg" alt="westCrate" id="westCrate" draggable="false">
                 </button>
                 <div id="westCrate-zoomedin" popover>
-                    <img src="images/gameAssets/rooms/west/openCrate.svg" draggable="false" id="westCrate-zoomedimg">
+                    <img src="images/gameAssets/rooms/west/openCrate.svg" draggable="false" class="zoomedimg">
                     <button popovertarget="westCrate-zoomedin" popovertargetaction="hide"><img src="images/gameAssets/downArrow.svg" alt=""></button>
                 </div>
             </section>
@@ -197,7 +204,6 @@
                             <p id="day1PD"></p>
                             <div id="playerDialogueArrow"></div>
                         </div>
-                       
                     </div>
                 </div>
             </section>
