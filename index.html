@@ -70,10 +70,11 @@
     <section id="archives">
         <div class="blur">
             <div class="scrollable">
-                <div class="scrollWrap">
                     <input type="checkbox" id="back">
                     <label for="back" class="backStyle">Back</label>
-                    <div><img src="images/divider.svg" alt="archivesDivider" id="divider" draggable="false"></div> <!-- top divider-->
+
+                    <div><img src="images/divider.svg" alt="archivesDivider" id="divider" draggable="false"></div>
+
                     <div class="textblock">
 
                         <!-- About Us-->
@@ -91,7 +92,7 @@
                                 <img src="images/characters/osumi_2.png" alt="Osumi" draggable="false">
                                 <div>
                                 <p class="charName">Osumi</p>
-                                <p class="archiveText">She is lively and endlessly chatty, yet carries the quiet depth of someone who has seen much of the world. As a former freelance photojournalist, her camera once traveled with her through protests, festivals, and fragile moments of human resilience.<br><br>
+                                <p>She is lively and endlessly chatty, yet carries the quiet depth of someone who has seen much of the world. As a former freelance photojournalist, her camera once traveled with her through protests, festivals, and fragile moments of human resilience.<br><br>
                                 After years of constant use through long days, rough travel, and countless shutter clicks, the aging mechanism finally gave way, its internal parts worn down beyond their limits. To her, repairing it is about preserving the memories it captured and holding on to the chapters of her life that live within its lens.
                                 </p>
                             </div>
@@ -102,7 +103,7 @@
                                 <img src="images/characters/estella_1.png" alt="Estella" draggable="false">
                                 <div>
                                 <p class="charName">Estella</p>
-                                <p class="archiveText">She is a quiet, introspective witch who studies magic with patience and precision. Her enchanted camera was attuned to capture traces of arcane energy invisible to the naked eye, allowing her to document spell residues and rare magical phenomena. Over time, it became both her primary research tool and the archive of her discoveries.<br><br>
+                                <p>She is a quiet, introspective witch who studies magic with patience and precision. Her enchanted camera was attuned to capture traces of arcane energy invisible to the naked eye, allowing her to document spell residues and rare magical phenomena. Over time, it became both her primary research tool and the archive of her discoveries.<br><br>
                                 Years of exposure to powerful spells and unstable magic fields gradually corrupted its delicate mechanisms, distorting images before the device finally failed. She now seeks to repair it, hoping to recover the vital research and hidden knowledge stored within.
                                 </p>
                             </div>
@@ -113,14 +114,13 @@
                                 <img src="images/characters/flaffle_1.png" alt="Flaffle" draggable="false">
                                 <div>
                                 <p class="charName">Flaffle</p>
-                                <p class="archiveText">She is lively and endlessly chatty, yet carries the quiet depth of someone who has seen much of the world. As a former freelance photojournalist, her camera once traveled with her through protests, festivals, and fragile moments of human resilience.<br><br>
+                                <p>She is lively and endlessly chatty, yet carries the quiet depth of someone who has seen much of the world. As a former freelance photojournalist, her camera once traveled with her through protests, festivals, and fragile moments of human resilience.<br><br>
                                 After years of constant use through long days, rough travel, and countless shutter clicks, the aging mechanism finally gave way, its internal parts worn down beyond their limits. To her, repairing it is about preserving the memories it captured and holding on to the chapters of her life that live within its lens.
                                 </p>
                             </div>
                         </div>
 
                     <!-- Locked overlay -->
-
                         <div id="lockedOverlay">
                             <div class="stickyContainer">
                                 <div class="lockedSticky">
@@ -129,10 +129,7 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div> <!-- textblock-->
-                </div> <!-- scrollWrap-->
             </div> <!-- scrollable-->
         </div> <!-- blur-->
     </section>
@@ -184,20 +181,30 @@
             <!-- Visual Novel View -->
             <section id="vnView">
                 <img src="images/gameAssets/vn/shopbg.png" draggable="false">
-                <img src="images/characters/estella_1.png" alt="osumi1" id="osumiVn" draggable="false">
+                <img src="images/characters/osumi_3.png" id="osumiVn" draggable="false">
                 <div id="dialogueWrap">
                     <div id="dialogueBubble">
-                    <p id="day1D">Oh hello! I wasn't expecting a camera repair shop of all things to open up here, in such a tucked away and hidden spot.</p>
+                    <p id="day1D"></p>
                 </div>
 
-                <div class="dialogueArrow"></div>
+                <div id="dialogueArrow"></div>
                 </div>
                 <img src="images/gameAssets/vn/vnCounter.svg" draggable="false" id="vnCounter">
+
+                <div id="playerDialogue">
+                    <div id="playerDialogueWrap">
+                        <div id="playerRow">
+                            <p id="day1PD"></p>
+                            <div id="playerDialogueArrow"></div>
+                        </div>
+                       
+                    </div>
+                </div>
             </section>
         </div>
 
-        <!-- fade out animation for switching rooms -->
-        <div id="fade"></div>
+        <!-- fade out animation -->
+        <div id="fade"><p id="dayCounter"></p></div>
     </main>
     <div id="small">Your browser is too small to play this game. Try resizing it!</div>
     <div id="touch">It appears you're using a touch device. Please play this game with a desktop and mouse!</div>
