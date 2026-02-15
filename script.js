@@ -579,6 +579,7 @@ function shuffle(arr) {
   return arr;
 }
 
+
 const lottieCursor = document.getElementById("lottieCursor");
 
 // Follow mouse
