@@ -419,7 +419,6 @@ body:has(#back:checked) #archives, body:has(#back:checked) #collection {
 
 /* closes model viewer if back is checked */
 body:has(#back:checked) #viewerGroup, body:has(#back:checked) .modelViewer, body:has(#back:checked) #viewerContainer, body:has(#back:checked) #exitViewerButton {
-    display: none;
     opacity: 0;
     pointer-events: none;
 }
