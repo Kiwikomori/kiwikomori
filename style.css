@@ -796,3 +796,164 @@ body:has(#archivesbtn:checked) #title, body:has(#collectionbtn:checked) #title {
     font-size: 14px;
     color: #ffffffe3;
 }
+
+#playerChoice {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    display: none;
+}
+
+.playerRowChoice {
+    display: flex;
+}
+
+#choice1 {
+    text-align: right;
+    padding-right: 10px;
+    position: absolute;
+    right: 328px;
+    bottom: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+#choice2 {
+    text-align: left;
+    padding-left: 10px;
+    position: absolute;
+    left: 328px;
+    bottom: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+#choice1:hover, #choice2:hover {
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.choiceDivider {
+    position: fixed;
+    height: 70px;
+    left: 315px;
+    top: 11px;
+}
+
+/*---------------Game Puzzles---------------*/
+/*Simon game*/
+.buttonCenter{
+    position: absolute;
+    top:140px;
+    left: 320px;
+}
+
+.lightsCenter {
+    position: absolute;
+    top: 30px;
+    left: 320px;
+}
+
+/*style for buttons*/
+.simonButtonStyle{
+    position:absolute;
+    width: 57px;
+    height: 57px;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.15s ease;
+}
+
+.simonButtonStyle.hidden {
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
+}
+
+.simonButtonStyle.correct {
+  background-color: rgba(0, 255, 0, 0.253);
+}
+
+.simonButtonStyle.wrong {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.lights {
+    position: absolute;
+}
+
+/* Lights default = hidden */
+#greenLight1,
+#greenLight2 {
+    opacity: 0 !important;   
+    transition: opacity 0.3s ease;
+}
+
+/* When player wins */
+#greenLight1.light-on,
+#greenLight2.light-on {
+    opacity: 1 !important;
+}
+
+/*positioning lights*/
+#greenLight1 {
+    top: 21px;
+    left: -40px;
+}
+
+#greenLight2 {
+    top: 21px;
+    left: -0px;
+}
+
+/*positioning buttons*/
+#button1{
+    top: -3px;
+    left: -163px;
+}
+
+#button2{
+    top: -3px;
+    left: -100px;
+}
+
+#button3{
+    top: -3px;
+    left: -34px;
+}
+
+#button4{
+    top: -3px;
+    left: 31px;
+}
+
+#button5{
+    top: -3px;
+    left: 99px;
+}
+
+#button6{
+    top: 61px;
+    left: -163px;
+}
+
+#button7{
+    top: 61px;
+    left: -100px;
+}
+
+#button8{
+    top: 61px;
+    left: -34px;
+}
+
+#button9{
+    top: 61px;
+    left: 31px;
+}
+
+#button10{
+    top: 61px;
+    left: 99px;
+}
