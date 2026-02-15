@@ -539,3 +539,23 @@ function shuffle(arr) {
   return arr;
 }
 */
+
+const lottieCursor = document.getElementById("lottieCursor");
+
+// Follow mouse
+document.addEventListener("pointermove", (e) => {
+  lottieCursor.style.left = `${e.clientX}px`;
+  lottieCursor.style.top = `${e.clientY}px`;
+});
+
+// Pulse on left click only
+document.addEventListener("pointerdown", (e) => {
+  if (e.button !== 0) return; // only left click (button 0)
+  
+  lottieCursor.classList.add("pulse");
+
+  // Remove pulse after animation ends so it can retrigger
+  setTimeout(() => {
+    lottieCursor.classList.remove("pulse");
+  }, 300);
+});
